@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="description" content="">
+
+        <!-- font-awesome -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!-- font-awesome　cdnリンク -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <!-- リセットcss -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- js -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <!-- 背景スライドショー -->
+            <div div class="img-box">
+                <h1>
+                    <img class="logo" src="images/logo.png" alt="">
+                </h1>
+                <div class="sss"></div>
+                <div class="sss"></div>
+                <div class="sss"></div>
+            
+                <!-- ハンバーガー -->    
+                <div class="right">
+                    <div class="toggle">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <nav class="hmenu">
+
+                <!-- ナビゲーション -->
+                    <ul class="list">
+                        <li class="item"><a href="#">Fidealについて</a></li>
+                        <li class="item"><a href="#">初めての方へ</a></li>
+                        <li class="item"><a href="#">プログラム</a></li>
+                        <li class="item"><a href="#">料金</a></li>
+                        <li class="item"><a href="#">設備案内</a></li>
+                        <li class="item"><a href="#">よくある質問</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- スライダー -->
+            <div class="test-slick">
+                <div class="test-slick__item"><img src="images/slider.png" alt=""></div>
+                <div class="test-slick__item"><img src="images/slider.png" alt=""></div>
+                <div class="test-slick__item"><img src="images/slider.png" alt=""></div>
+                <div class="test-slick__item"><img src="images/slider.png" alt=""></div>
+            </div>            
+
+        <!-- ABOUT -->
+        <section>
+            <div class="wrapper">
+                <h2 class="sec-title">ABOUT</h2>
+                <div class="scroll-space">
+                    <div class="fadein">
+                        <img src="images/about.png" alt="">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptatum. Possimus, maxime! Facere exercitationem nam, repellendus debitis, eaque numquam ullam nemo sit minus repudiandae enim quisquam praesentium doloremque quam vel?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWS -->
+        <section>
+
+            
+        </section>
+
+        <!-- プログラム -->
+        <section>
+
+            
+        </section>
+
+        <!--  コラム -->
+        <section>
+
+            
+        </section>
+
+        <!-- top-pageボタン -->
+        <p class="pagetop"><a href="#"><i class="fa-solid fa-circle-chevron-up"></i></a></p>
+
+
+        <footer>
+            <nav>
+                <ul class="list">
+                    <li class="item"><a href="#">Fidealについて</a></li>
+                    <li class="item"><a href="#">初めての方へ</a></li>
+                    <li class="item"><a href="#">プログラム</a></li>
+                    <li class="item"><a href="#">料金</a></li>
+                    <li class="item"><a href="#">設備案内</a></li>
+                    <li class="item"><a href="#">よくある質問</a></li>
+                </ul>
+                <ul class="list">
+                    <li class="item"><a href="#">会社概要</a></li>
+                    <li class="item"><a href="#">プライバシーポリシー</a></li>
+                    
+                </ul>
+            </nav>
+
+
+        </footer>
+
+        
+
+    
+        <!-- js記述 -->
+
+
+        <!-- スライダー -->
+        <script>
+            $(function () {
+            $(".test-slick").slick({
+                arrows: false,
+                autoplay: true,
+                adaptiveHeight: true,
+                centerMode: true,
+                centerPadding: "15%",
+                dots: true,
+            });
+            });
+        </script>
+
+         <!-- ABOUTふわっと下から -->
+         <script>
+            $(window).scroll(function (){
+            $('.fadein').each(function(){
+                var elemPos = $(this).offset().top,
+                scroll = $(window).scrollTop(),
+                windowHeight = $(window).height();
+
+                if (scroll > elemPos - windowHeight + 150){
+                    $(this).addClass('scrollin');
+                }
+            });
+        });
+        </script>
+
+        <!-- page-topボタン -->
+        <script>
+            $(function() {
+            var topBtn = $('.pagetop');    
+            topBtn.hide();
+            //スクロールが100に達したらボタン表示
+            $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+            //ボタンの表示方法
+            topBtn.fadeIn();
+            } else {
+            //ボタンの非表示方法
+            topBtn.fadeOut();
+            }
+            });
+            //スクロールしてトップ
+            topBtn.click(function () {
+            $('body,  html').animate({
+            scrollTop: 0
+            },   500);
+            return false;
+            });
+            });
+        </script>
+        
+
+
+    </body>
+</html>  
+
+
