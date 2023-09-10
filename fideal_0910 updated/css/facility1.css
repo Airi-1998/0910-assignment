@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+/* 全体・共通
+----------------------------- */
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+.sec-title {
+  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  color: #000;
+}
+
+
+
+
+
+/* 設備 森田セクション１
+------------------------------- */
+
+
+/* セクションクラス：ファシリティーヘッダー*/
+.facility-header {
+    background-image: url(../images/facility2.jpg);
+    background-size: cover;
+    background-position: center center; 
+    height: 679px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .facility-header h1 {
+    color: #ffffff;
+    font-size: 36px; 
+  }
+  
+  .facility-header {
+    margin-bottom: 50px;
+  }
+
+
+  /* クラス：フロアマップ*/
+  
+  .floor-guide {
+      text-align: center;
+      margin: 20px 0;
+  }
+  
+  .floor-guide a {
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: bold;
+      margin: 0 10px;
+  }
+  
+  .floor1 {
+      text-align: center;
+      margin: 20px 0;
+  }
+  
+  .main-floor1-image {
+      text-align: center;
+      margin: 20px 0;
+  }
+  
+  .main-floor1-image img {
+      max-width: 100%;
+      height: auto;
+  }
+
+
+  /* セクションクラス：セクション */
+  
+  #facility {
+    max-width: 1920px;
+  }
+  
+  #facility main .images {
+    margin-bottom: 50px;
+  }
+  
+  #facility main .images .contents-sub-images {
+    margin-top: 20px;
+  }
+  
+  #facility main .images .band h2 {
+    text-align: center;
+  }
+  
+  #facility main .images .band {
+    margin-bottom: 50px;
+  }
+  
+  #facility main .images .moveup .contents-main-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+  }
+  
+  #facility main .images .contents-sub-images {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #facility main .images .contents-sub-images div {
+    text-align: center;
+  }
+   
