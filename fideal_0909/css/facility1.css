@@ -1,37 +1,6 @@
 @charset "UTF-8";
 
-/* 全体・共通
------------------------------ */
-html {
-  font-size: 100%;
-  scroll-behavior: smooth;
-}
-a {
-  text-decoration: none;
-  color: #fff;
-}
-li {
-  list-style: none;
-}
-img {
-  max-width: 100%;
-}
-
-.wrapper {
-  max-width: 1200px;
-  margin: 100px auto;
-  padding: 0 20px;
-}
-.sec-title {
-  margin-top: 50px;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  font-size: 3rem;
-  color: #000;
-}
-
-
-
+@import url(./style.css);
 
 
 /* 設備 森田セクション１
