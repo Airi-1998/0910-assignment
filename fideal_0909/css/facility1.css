@@ -86,11 +86,53 @@
     justify-content: center;
     flex-wrap: nowrap;
     margin: 0 auto;
+    overflow: hidden; // dummy
   }
   
   #facility main .images .contents-sub-images {
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+    }  
+
+    .contents-sub-item {
+      flex: 1;
+
+      @media screen and (max-width: 700px) {
+        margin: 12px auto 0;
+        max-width: 375px;
+      }  
+    }
+
+    .contents-sub-image {
+      display: flex;
+      box-sizing: border-box;
+
+      @media screen and (max-width: 700px) {
+        padding: 0 12px;
+        width: 100%;
+      }
+    }
+
+    .contents-sub-summary {
+      margin-top: 12px;
+      line-height: 1.8;
+      word-break: break-all;
+    }
+
+    .contents-sub-title {
+      padding: 0 12px;
+    }
+
+    .contents-sub-description {
+      margin-top: 4px;
+      padding: 0 75px;
+      @media screen and (max-width: 700px) {
+        padding: 0 12px;
+      }
+    }
   }
   
   #facility main .images .contents-sub-images div {
