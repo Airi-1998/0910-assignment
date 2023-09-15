@@ -17,7 +17,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 700px)  {
+      height: 30vh;
+    }
   }
+
+
   
   .facility-header h1 {
     color: #ffffff;
@@ -65,35 +71,39 @@
     max-width: 1920px;
   }
   
-  #facility main .images {
+  #facility .images {
     margin-bottom: 50px;
   }
   
-  #facility main .images .contents-sub-images {
+  #facility .images .contents-sub-images {
     margin-top: 20px;
   }
   
-  #facility main .images .band h2 {
+  #facility .images .band h2 {
     text-align: center;
   }
+
+
   
-  #facility main .images .band {
+  #facility .images .band {
     margin-bottom: 50px;
+    background-color: aqua;
+    line-height: 1.6;
   }
   
-  #facility main .images .moveup .contents-main-images {
+  #facility .images .moveup .contents-main-images {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
     margin: 0 auto;
   }
   
-  #facility main .images .contents-sub-images {
+  #facility .images .contents-sub-images {
     display: flex;
     justify-content: center;
   }
   
-  #facility main .images .contents-sub-images div {
+  #facility .images .contents-sub-images div {
     text-align: center;
   }
    
