@@ -8,6 +8,13 @@
 
 
 /* セクションクラス：ファシリティーヘッダー*/
+
+/* 画面の最大幅設定 */
+#facility {
+  max-width: 1920px;
+}
+
+/* ヘッダーのバックグランド背景 */
 .facility-header {
     background-image: url(../images/facility2.jpg);
     background-size: cover;
@@ -17,81 +24,140 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 
-    @media screen and (max-width: 700px)  {
+    @media screen and (max-width: 650px)  {
       height: 30vh;
+    }
+
+    /* 元々700pxと400pxだった */
+
+    @media screen and (max-width: 370px)  {
+      height: 20vh;
+    }
+  }
+
+
+  /* ヘッダーのバックグランド背景にかかる「施設設備の文字」 */
+  .facility-header h1 {
+    color: #ffffff;
+    font-size: 50px; 
+
+    @media screen and (max-width: 650px)  {
+      font-size: 20px;
+    }
+    
+    @media screen and (max-width: 370px)  {
+      font-size: 10px;
+    }
+  }
+  
+
+
+  /* セクションクラス：フロアマップ*/
+
+  /* 「1階/2階」のホバー箇所を包む要素 */
+  .floor-guide {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* 「1階/2階」のホバー箇所 */
+  .floor-guide a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #0077b6;
+    font-weight: bold;
+    margin: 0 10px;
+
+    @media screen and (max-width: 650px)  {
+      font-size: 15px;
+    }
+    
+    @media screen and (max-width: 370px)  {
+      font-size: 10px;
+    }
+  }
+
+  /* 「1階」大きい表示を包む要素 */
+  .floor1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  /* 「1階」大きい文字 */
+  #facility main .contents .floormap .floor1 h2 {
+    color: black;
+    font-size: 40px;
+    text-align: center;
+
+    @media screen and (max-width: 650px)  {
+      font-size: 30px;
+    }
+    
+    @media screen and (max-width: 370px)  {
+      font-size: 20px;
+    }
+  }
+  
+  /* 1階の地図写真 */
+  .main-floor1-image {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .main-floor1-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  /* セクションクラス：イメージズ */
+
+  #facility main .contents .images {
+    margin-bottom: 50px;
+  }
+  
+  #facility main .contents .images .moveup .contents-sub-images {
+    margin-top: 20px;
+  }
+  
+  /* 「フロント」文字 */
+  #facility main .contents .images .band h2 {
+    font-size: 50px;
+    text-align: center;
+    color: #ffffff;
+
+    @media screen and (max-width: 650px)  {
+      font-size: 30px;
+    }
+    
+    @media screen and (max-width: 370px)  {
+      font-size: 20px;
     }
   }
 
 
   
-  .facility-header h1 {
-    color: #ffffff;
-    font-size: 36px; 
-  }
-  
-  .facility-header {
-    margin-bottom: 50px;
-  }
-
-
-  /* クラス：フロアマップ*/
-  
-  .floor-guide {
-      text-align: center;
-      margin: 20px 0;
-  }
-  
-  .floor-guide a {
-      text-decoration: none;
-      color: #0077b6;
-      font-weight: bold;
-      margin: 0 10px;
-  }
-  
-  .floor1 {
-      text-align: center;
-      margin: 20px 0;
-  }
-  
-  .main-floor1-image {
-      text-align: center;
-      margin: 20px 0;
-  }
-  
-  .main-floor1-image img {
-      max-width: 100%;
-      height: auto;
-  }
-
-
-  /* セクションクラス：セクション */
-  
-  #facility {
-    max-width: 1920px;
-  }
-  
-  #facility .images {
-    margin-bottom: 50px;
-  }
-  
-  #facility .images .contents-sub-images {
-    margin-top: 20px;
-    
-  }
-  
-  #facility .images .band h2 {
-    text-align: center;
-  }
-
-
-  
   #facility .images .band {
+    height: 150px;
     margin-bottom: 50px;
-    background-color: aqua;
-    line-height: 1.6;
+    background-color: #f6c7ac;
+    line-height: 3.0;
+
+    @media screen and (max-width: 650px)  {
+      height: 100px;
+      line-height: 3.5;
+    }
+    
+    @media screen and (max-width: 370px)  {
+      height: 80px;
+      line-height: 4.0;
+    }
   }
   
+
+  /* メインイメージ */
   #facility .images .moveup .contents-main-images {
     display: flex;
     justify-content: center;
@@ -104,12 +170,38 @@
     }
   }
   
+
+  /* サブイメージ */
   #facility .images .contents-sub-images {
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 650px)  {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 20px auto 0;
+      max-width: 350px;
+    }
+    
+    @media screen and (max-width: 370px)  {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 20px auto 0;
+      max-width: 300px;
+    }
   }
   
   #facility .images .contents-sub-images div {
     text-align: center;
+    margin-bottom: 30px;
   }
-   
+
+  #facility .images .contents-sub-images image {
+    flex: 1;
+  }
+
+  .contents-sub-title {
+    line-height: 3.0;
+  }
